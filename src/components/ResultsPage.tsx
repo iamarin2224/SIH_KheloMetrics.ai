@@ -16,7 +16,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
-const ResultsPage = () => {
+const ResultsPage = ({ onBackToDashboard }: { onBackToDashboard?: () => void }) => {
   const testResults: Array<{
     test: string;
     score: string;
@@ -68,6 +68,18 @@ const ResultsPage = () => {
       <div className="bg-white border-b border-border sticky top-0 z-40">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
+            <button
+              onClick={() => {
+                if (onBackToDashboard) {
+                  onBackToDashboard();
+                } else {
+                  window.location.href = "/athlete-dashboard";
+                }
+              }}
+              className="text-primary hover:text-primary/80 transition-colors"
+            >
+              ← Back to Dashboard
+            </button>
             <div>
               <h1 className="text-xl font-bold">Assessment Results</h1>
               <p className="text-sm text-muted-foreground">Your complete performance report</p>

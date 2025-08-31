@@ -3,7 +3,7 @@ import { ChevronRight, Globe, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
-const AthleteOnboarding = () => {
+const AthleteOnboarding = ({ onComplete }: { onComplete?: () => void }) => {
   const [selectedLanguage, setSelectedLanguage] = useState("");
   const [phone, setPhone] = useState("");
   const [otp, setOtp] = useState("");
@@ -28,7 +28,11 @@ const AthleteOnboarding = () => {
 
   const handleVerifyOTP = () => {
     if (otp.length === 6) {
-      window.location.href = "/athlete-dashboard";
+      if (onComplete) {
+        onComplete();
+      } else {
+        window.location.href = "/athlete-dashboard";
+      }
     }
   };
 

@@ -14,7 +14,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 
-const AthleteDashboard = () => {
+const AthleteDashboard = ({ onViewResults }: { onViewResults?: () => void }) => {
   const [completedTests, setCompletedTests] = useState(2);
   const totalTests = 4;
   const progressPercentage = (completedTests / totalTests) * 100;
@@ -63,8 +63,23 @@ const AthleteDashboard = () => {
   ];
 
   const handleStartTest = (testId: number) => {
-    // In a real app, this would navigate to the test interface
-    console.log(`Starting test ${testId}`);
+    // For completed tests, show results
+    const test = tests.find(t => t.id === testId);
+    if (test?.completed) {
+      if (onViewResults) {
+        onViewResults();
+      } else {
+        window.location.href = "/athlete-results";
+      }
+    } else {
+      // For new tests, simulate completion and go to results
+      console.log(`Starting test ${testId}`);
+      if (onViewResults) {
+        onViewResults();
+      } else {
+        window.location.href = "/athlete-results";
+      }
+    }
   };
 
   return (
