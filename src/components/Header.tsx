@@ -17,10 +17,13 @@ const Header = () => {
           </div>
 
           {/* Center Brand Name - Visible on all screens */}
-          <div className="absolute left-1/2 transform -translate-x-1/2">
-            <h1 className="text-lg font-bold text-foreground">
-              AthleTics<sub className="text-xs text-muted-foreground ml-1">SAI</sub>
+          <div className="absolute left-1/2 transform -translate-x-1/2 text-center">
+            <h1 className="text-xl font-bold text-foreground leading-tight">
+              KhelMetrics
             </h1>
+            <p className="text-xs text-muted-foreground font-medium -mt-1">
+              from SAI
+            </p>
           </div>
 
           {/* Desktop Navigation */}
