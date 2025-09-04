@@ -14,10 +14,13 @@ const Header = () => {
             <div className="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-xl flex items-center justify-center">
               <Trophy className="h-6 w-6 text-white" />
             </div>
-            <div className="hidden sm:block">
-              <h1 className="text-lg font-bold text-foreground">Sports Authority</h1>
-              <p className="text-xs text-muted-foreground">Talent Assessment</p>
-            </div>
+          </div>
+
+          {/* Center Brand Name - Visible on all screens */}
+          <div className="absolute left-1/2 transform -translate-x-1/2">
+            <h1 className="text-lg font-bold text-foreground">
+              AthleTics<sub className="text-xs text-muted-foreground ml-1">SAI</sub>
+            </h1>
           </div>
 
           {/* Desktop Navigation */}
