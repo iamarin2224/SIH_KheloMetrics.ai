@@ -40,28 +40,28 @@ const OfficialDashboard = ({ onLogout, officialInfo }: OfficialDashboardProps) =
   // Enhanced athlete dataset with more realistic data
   const allAthletes = [
     // Page 1 - Top performers (including required names)
-    { id: 1, name: "Srinjoy Mukherjee", athleteId: "ATH001", age: 17, gender: "Male", district: "Kolkata", overallScore: 94, status: "verified", lastTest: "2024-01-15", rank: 1, flagged: false },
-    { id: 2, name: "Arin Das", athleteId: "ATH002", age: 16, gender: "Male", district: "Mumbai", overallScore: 92, status: "verified", lastTest: "2024-01-14", rank: 2, flagged: false },
-    { id: 3, name: "Biprarshi Biswas", athleteId: "ATH003", age: 18, gender: "Male", district: "Delhi", overallScore: 90, status: "borderline", lastTest: "2024-01-13", rank: 3, flagged: true },
-    { id: 4, name: "Supriti Gandhi", athleteId: "ATH004", age: 17, gender: "Female", district: "Ahmedabad", overallScore: 89, status: "verified", lastTest: "2024-01-12", rank: 4, flagged: false },
-    { id: 5, name: "Subham Neogi", athleteId: "ATH005", age: 16, gender: "Male", district: "Chennai", overallScore: 87, status: "flagged", lastTest: "2024-01-11", rank: 5, flagged: true },
-    { id: 6, name: "Souvik Chakrabarty", athleteId: "ATH006", age: 18, gender: "Male", district: "Bangalore", overallScore: 86, status: "verified", lastTest: "2024-01-10", rank: 6, flagged: false },
-    { id: 7, name: "Ananya Sharma", athleteId: "ATH007", age: 17, gender: "Female", district: "Pune", overallScore: 85, status: "borderline", lastTest: "2024-01-09", rank: 7, flagged: false },
-    { id: 8, name: "Rahul Gupta", athleteId: "ATH008", age: 16, gender: "Male", district: "Hyderabad", overallScore: 84, status: "verified", lastTest: "2024-01-08", rank: 8, flagged: false },
-    { id: 9, name: "Priya Patel", athleteId: "ATH009", age: 18, gender: "Female", district: "Surat", overallScore: 83, status: "borderline", lastTest: "2024-01-07", rank: 9, flagged: true },
-    { id: 10, name: "Vikram Singh", athleteId: "ATH010", age: 17, gender: "Male", district: "Jaipur", overallScore: 82, status: "verified", lastTest: "2024-01-06", rank: 10, flagged: false },
+    { id: 1, name: "Srinjoy Mukherjee", athleteId: "ATH7829", age: 17, gender: "Male", district: "Kolkata", overallScore: 94, status: "verified", lastTest: "2024-01-15", rank: 1 },
+    { id: 2, name: "Arin Das", athleteId: "ATH4563", age: 16, gender: "Male", district: "Mumbai", overallScore: 92, status: "verified", lastTest: "2024-01-14", rank: 2 },
+    { id: 3, name: "Biprarshi Biswas", athleteId: "ATH9142", age: 18, gender: "Male", district: "Delhi", overallScore: 90, status: "borderline", lastTest: "2024-01-13", rank: 3 },
+    { id: 4, name: "Supriti Gandhi", athleteId: "ATH6758", age: 17, gender: "Female", district: "Ahmedabad", overallScore: 89, status: "verified", lastTest: "2024-01-12", rank: 4 },
+    { id: 5, name: "Subham Neogi", athleteId: "ATH3891", age: 16, gender: "Male", district: "Chennai", overallScore: 87, status: "flagged", lastTest: "2024-01-11", rank: 5 },
+    { id: 6, name: "Souvik Chakrabarty", athleteId: "ATH5274", age: 18, gender: "Male", district: "Bangalore", overallScore: 86, status: "verified", lastTest: "2024-01-10", rank: 6 },
+    { id: 7, name: "Ananya Sharma", athleteId: "ATH8465", age: 17, gender: "Female", district: "Pune", overallScore: 85, status: "borderline", lastTest: "2024-01-09", rank: 7 },
+    { id: 8, name: "Rahul Gupta", athleteId: "ATH2937", age: 16, gender: "Male", district: "Hyderabad", overallScore: 84, status: "verified", lastTest: "2024-01-08", rank: 8 },
+    { id: 9, name: "Priya Patel", athleteId: "ATH7183", age: 18, gender: "Female", district: "Surat", overallScore: 83, status: "borderline", lastTest: "2024-01-07", rank: 9 },
+    { id: 10, name: "Vikram Singh", athleteId: "ATH4526", age: 17, gender: "Male", district: "Jaipur", overallScore: 82, status: "verified", lastTest: "2024-01-06", rank: 10 },
     
     // Page 2 - Additional athletes
-    { id: 11, name: "Kavya Reddy", athleteId: "ATH011", age: 16, gender: "Female", district: "Visakhapatnam", overallScore: 81, status: "verified", lastTest: "2024-01-05", rank: 11, flagged: false },
-    { id: 12, name: "Arjun Kumar", athleteId: "ATH012", age: 18, gender: "Male", district: "Lucknow", overallScore: 80, status: "borderline", lastTest: "2024-01-04", rank: 12, flagged: false },
-    { id: 13, name: "Sneha Desai", athleteId: "ATH013", age: 17, gender: "Female", district: "Nagpur", overallScore: 79, status: "flagged", lastTest: "2024-01-03", rank: 13, flagged: true },
-    { id: 14, name: "Rohit Verma", athleteId: "ATH014", age: 16, gender: "Male", district: "Indore", overallScore: 78, status: "verified", lastTest: "2024-01-02", rank: 14, flagged: false },
-    { id: 15, name: "Meera Shah", athleteId: "ATH015", age: 18, gender: "Female", district: "Vadodara", overallScore: 77, status: "borderline", lastTest: "2024-01-01", rank: 15, flagged: false },
-    { id: 16, name: "Karan Joshi", athleteId: "ATH016", age: 17, gender: "Male", district: "Bhopal", overallScore: 76, status: "verified", lastTest: "2023-12-31", rank: 16, flagged: false },
-    { id: 17, name: "Riya Agarwal", athleteId: "ATH017", age: 16, gender: "Female", district: "Chandigarh", overallScore: 75, status: "flagged", lastTest: "2023-12-30", rank: 17, flagged: true },
-    { id: 18, name: "Aditya Mishra", athleteId: "ATH018", age: 18, gender: "Male", district: "Gwalior", overallScore: 74, status: "borderline", lastTest: "2023-12-29", rank: 18, flagged: false },
-    { id: 19, name: "Pooja Nair", athleteId: "ATH019", age: 17, gender: "Female", district: "Kochi", overallScore: 73, status: "verified", lastTest: "2023-12-28", rank: 19, flagged: false },
-    { id: 20, name: "Siddharth Roy", athleteId: "ATH020", age: 16, gender: "Male", district: "Guwahati", overallScore: 72, status: "flagged", lastTest: "2023-12-27", rank: 20, flagged: true }
+    { id: 11, name: "Kavya Reddy", athleteId: "ATH8712", age: 16, gender: "Female", district: "Visakhapatnam", overallScore: 81, status: "verified", lastTest: "2024-01-05", rank: 11 },
+    { id: 12, name: "Arjun Kumar", athleteId: "ATH3654", age: 18, gender: "Male", district: "Lucknow", overallScore: 80, status: "borderline", lastTest: "2024-01-04", rank: 12 },
+    { id: 13, name: "Sneha Desai", athleteId: "ATH9283", age: 17, gender: "Female", district: "Nagpur", overallScore: 79, status: "flagged", lastTest: "2024-01-03", rank: 13 },
+    { id: 14, name: "Rohit Verma", athleteId: "ATH5741", age: 16, gender: "Male", district: "Indore", overallScore: 78, status: "verified", lastTest: "2024-01-02", rank: 14 },
+    { id: 15, name: "Meera Shah", athleteId: "ATH6198", age: 18, gender: "Female", district: "Vadodara", overallScore: 77, status: "borderline", lastTest: "2024-01-01", rank: 15 },
+    { id: 16, name: "Karan Joshi", athleteId: "ATH4867", age: 17, gender: "Male", district: "Bhopal", overallScore: 76, status: "verified", lastTest: "2023-12-31", rank: 16 },
+    { id: 17, name: "Riya Agarwal", athleteId: "ATH7432", age: 16, gender: "Female", district: "Chandigarh", overallScore: 75, status: "flagged", lastTest: "2023-12-30", rank: 17 },
+    { id: 18, name: "Aditya Mishra", athleteId: "ATH3158", age: 18, gender: "Male", district: "Gwalior", overallScore: 74, status: "borderline", lastTest: "2023-12-29", rank: 18 },
+    { id: 19, name: "Pooja Nair", athleteId: "ATH8926", age: 17, gender: "Female", district: "Kochi", overallScore: 73, status: "verified", lastTest: "2023-12-28", rank: 19 },
+    { id: 20, name: "Siddharth Roy", athleteId: "ATH5673", age: 16, gender: "Male", district: "Guwahati", overallScore: 72, status: "flagged", lastTest: "2023-12-27", rank: 20 }
   ];
 
   // Filter and search logic
@@ -81,9 +81,9 @@ const OfficialDashboard = ({ onLogout, officialInfo }: OfficialDashboardProps) =
 
   const stats = {
     totalAthletes: 5234, // Display inflated number for scale
-    verifiedResults: allAthletes.filter(a => a.status === "verified").length,
-    flaggedResults: allAthletes.filter(a => a.status === "flagged").length,
-    borderlineResults: allAthletes.filter(a => a.status === "borderline").length
+    verifiedResults: 4521, // Inflated numbers for demo
+    flaggedResults: 387,
+    borderlineResults: 326
   };
 
   const getStatusColor = (status: string) => {
@@ -92,6 +92,15 @@ const OfficialDashboard = ({ onLogout, officialInfo }: OfficialDashboardProps) =
       case "borderline": return "secondary";
       case "flagged": return "destructive";
       default: return "secondary";
+    }
+  };
+
+  const getStatusBadgeClassName = (status: string) => {
+    switch (status) {
+      case "verified": return "bg-green-600 text-white hover:bg-green-700";
+      case "borderline": return "bg-yellow-500 text-white hover:bg-yellow-600";
+      case "flagged": return "bg-destructive text-destructive-foreground";
+      default: return "";
     }
   };
 
@@ -282,9 +291,6 @@ const OfficialDashboard = ({ onLogout, officialInfo }: OfficialDashboardProps) =
                       <div className="flex items-center space-x-2 mb-1">
                         <h4 className="font-medium">{athlete.name}</h4>
                         <span className="text-xs text-muted-foreground">({athlete.athleteId})</span>
-                        {athlete.flagged && (
-                          <Badge variant="destructive" className="text-xs">Flagged</Badge>
-                        )}
                       </div>
                       <div className="flex items-center space-x-4 text-sm text-muted-foreground">
                         <span>{athlete.gender}, Age {athlete.age}</span>
@@ -309,7 +315,7 @@ const OfficialDashboard = ({ onLogout, officialInfo }: OfficialDashboardProps) =
                         athlete.status === 'borderline' ? 'text-orange-500' :
                         'text-destructive'
                       }`} />
-                      <Badge variant={getStatusColor(athlete.status) as any} className="capitalize">
+                      <Badge variant={getStatusColor(athlete.status) as any} className={`capitalize ${getStatusBadgeClassName(athlete.status)}`}>
                         {athlete.status}
                       </Badge>
                     </div>
