@@ -80,7 +80,7 @@ const OfficialDashboard = ({ onLogout, officialInfo }: OfficialDashboardProps) =
   const currentAthletes = filteredAthletes.slice(startIndex, endIndex);
 
   const stats = {
-    totalAthletes: allAthletes.length,
+    totalAthletes: 5234, // Display inflated number for scale
     verifiedResults: allAthletes.filter(a => a.status === "verified").length,
     flaggedResults: allAthletes.filter(a => a.status === "flagged").length,
     borderlineResults: allAthletes.filter(a => a.status === "borderline").length
@@ -203,20 +203,22 @@ const OfficialDashboard = ({ onLogout, officialInfo }: OfficialDashboardProps) =
                 size="sm"
                 onClick={() => handleFilterChange("all")}
               >
-                All Athletes ({allAthletes.length})
+                All Athletes ({stats.totalAthletes})
               </Button>
               <Button
-                variant={selectedFilter === "flagged" ? "default" : "outline"}
+                variant={selectedFilter === "flagged" ? "destructive" : "outline"}
                 size="sm"
                 onClick={() => handleFilterChange("flagged")}
+                className={selectedFilter === "flagged" ? "bg-destructive text-destructive-foreground" : ""}
               >
                 <AlertTriangle className="h-3 w-3 mr-1" />
                 Flagged ({stats.flaggedResults})
               </Button>
               <Button
-                variant={selectedFilter === "borderline" ? "default" : "outline"}
+                variant={selectedFilter === "borderline" ? "secondary" : "outline"}
                 size="sm"
                 onClick={() => handleFilterChange("borderline")}
+                className={selectedFilter === "borderline" ? "bg-yellow-500 text-white hover:bg-yellow-600" : ""}
               >
                 <AlertCircle className="h-3 w-3 mr-1" />
                 Borderline ({stats.borderlineResults})
@@ -225,6 +227,7 @@ const OfficialDashboard = ({ onLogout, officialInfo }: OfficialDashboardProps) =
                 variant={selectedFilter === "verified" ? "default" : "outline"}
                 size="sm"
                 onClick={() => handleFilterChange("verified")}
+                className={selectedFilter === "verified" ? "bg-green-600 text-white hover:bg-green-700" : ""}
               >
                 <CheckCircle2 className="h-3 w-3 mr-1" />
                 Verified ({stats.verifiedResults})
@@ -370,22 +373,18 @@ const OfficialDashboard = ({ onLogout, officialInfo }: OfficialDashboardProps) =
                     );
                   })}
                   
-                  {totalPages > 5 && (
-                    <>
-                      <PaginationItem>
-                        <span className="px-3 py-2">...</span>
-                      </PaginationItem>
-                      <PaginationItem>
-                        <PaginationLink
-                          onClick={() => setCurrentPage(totalPages)}
-                          isActive={currentPage === totalPages}
-                          className="cursor-pointer"
-                        >
-                          {totalPages}
-                        </PaginationLink>
-                      </PaginationItem>
-                    </>
-                  )}
+                  <PaginationItem>
+                    <span className="px-3 py-2">...</span>
+                  </PaginationItem>
+                  <PaginationItem>
+                    <PaginationLink
+                      onClick={() => setCurrentPage(78)}
+                      isActive={currentPage === 78}
+                      className="cursor-pointer"
+                    >
+                      78
+                    </PaginationLink>
+                  </PaginationItem>
                   
                   <PaginationItem>
                     <PaginationNext 

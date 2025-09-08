@@ -44,7 +44,7 @@ const InvitationModal = ({ athlete, isOpen, onClose }: InvitationModalProps) => 
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-2xl">
+      <DialogContent className="sm:max-w-2xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="flex items-center space-x-3">
             <Mail className="h-6 w-6 text-primary" />

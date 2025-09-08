@@ -58,14 +58,14 @@ const OfficialLogin = ({ onLogin }: OfficialLoginProps) => {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="password">6-Digit ID</Label>
+            <Label htmlFor="password">6-Digit Password</Label>
             <div className="relative">
               <Input
                 id="password"
                 type={showPassword ? "text" : "password"}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder="Enter 6-digit ID"
+                placeholder="Enter 6-digit password"
                 maxLength={6}
                 className="w-full pr-12"
               />
@@ -93,9 +93,6 @@ const OfficialLogin = ({ onLogin }: OfficialLoginProps) => {
           </Button>
         </form>
 
-        <div className="mt-6 text-center text-sm text-muted-foreground">
-          <p>For demo: Enter any username and any 6-digit number</p>
-        </div>
       </Card>
     </div>
   );
